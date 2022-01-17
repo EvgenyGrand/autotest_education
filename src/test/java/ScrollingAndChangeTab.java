@@ -31,17 +31,18 @@ public class ScrollingAndChangeTab {
         for (String tab : driver.getWindowHandles()) {
             if (!tab.equals(currentTab)) {
                 driver.switchTo().window(tab);
-                WebElement name1 = driver.findElement(By.xpath("//*[@id=\"p-logo\"]/a"));
-                WebElement name2 = driver.findElement(By.xpath("//*[@id=\"mw-content-text\"]/div[1]/div[4]/div/a/img"));
+                WebElement name1 = driver.findElement(By.xpath("//*[@id=\"mw-content-text\"]/div[1]/table[1]/tbody/tr[2]/td/span/a/img"));
+                WebElement name2 = driver.findElement(By.xpath("//*[@id=\"p-logo\"]/a"));
                 String url = driver.getCurrentUrl();
                 Assert.assertEquals(true,name1.isDisplayed());
                 Assert.assertEquals(true,name2.isDisplayed());
                 Assert.assertEquals(url, "https://ru.wikipedia.org/wiki/Java");
-
             }
         }
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            driver.quit();
         }
     }
 }

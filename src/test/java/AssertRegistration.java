@@ -13,7 +13,7 @@ import java.security.Key;
 import java.time.Duration;
 import java.util.List;
 
-public class AssertGetatribute {
+public class AssertRegistration{
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -35,7 +35,7 @@ public class AssertGetatribute {
             WebElement ta = driver.findElement(By.xpath("//*[@id=\"user-menu-profile\"]"));
             ta.click();
             WebElement prof = driver.findElement(By.xpath("//*[@id=\"editProfileForm\"]/div[1]/h2/span"));
-            Assert.assertEquals(prof.getAttribute("innerText"),"test-user1");
+            Assert.assertEquals(prof.getText(),"test-user");
         } catch (Exception e) {
             e.printStackTrace();
         }finally {

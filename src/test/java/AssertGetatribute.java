@@ -35,7 +35,7 @@ public class AssertGetatribute {
             WebElement ta = driver.findElement(By.xpath("//*[@id=\"user-menu-profile\"]"));
             ta.click();
             WebElement prof = driver.findElement(By.xpath("//*[@id=\"editProfileForm\"]/div[1]/h2/span"));
-            Assert.assertEquals(prof.getAttribute("innerText"),"test-user1");
+            Assert.assertEquals(prof.getAttribute("innerText"),"test-user");
         } catch (Exception e) {
             e.printStackTrace();
         }finally {

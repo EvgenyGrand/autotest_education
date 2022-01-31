@@ -26,7 +26,7 @@ public class AssertRegistration{
             WebElement login = driver.findElement(By.xpath("//*[@id=\"userName\"]"));
             login.clear();
             login.sendKeys("test-user");
-            WebElement password = driver.findElement(By.xpath("//*[@id=\"password\"]"));
+            WebElement password = driver.findElement(By.cssSelector("#password"));
             password.sendKeys("test-user");
             WebElement input = driver.findElement(By.xpath("//*[@id=\"signin-submit-button\"]"));
             input.click();
@@ -38,6 +38,7 @@ public class AssertRegistration{
             Assert.assertEquals(prof.getText(),"test-user");
         } catch (Exception e) {
             e.printStackTrace();
+
         }finally {
             driver.quit();
         }

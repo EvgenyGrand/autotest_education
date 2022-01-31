@@ -27,24 +27,24 @@ public class sendkeys{
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
         try {
-            driver.get("https://www.bspb.ru/retail/consumer-loan/");
-            WebElement Podrob = driver.findElement(By.xpath("//*[@id=\"link_loansMore\"]"));
-            Podrob.click();
-            Thread.sleep(2000);
+
+            driver.get("https://www.bspb.ru/");
             JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("scroll(0,415);");
-            Thread.sleep(2000);
-            WebElement insuaranse = driver.findElement(By.xpath("//*[@id=\"currentInsurance\"]"));
-            WebElement input1 = driver.findElement(By.xpath("//*[@id=\"LoanCalculator\"]/div/div[1]/div[1]/div/div[1]/input"));
-            input1.clear();Thread.sleep(5000);
-            input1.sendKeys("200000");
-            WebElement input2 = driver.findElement(By.xpath("//*[@id=\"LoanCalculator\"]/div/div[1]/div[2]/div/div[1]/input"));
-            input2.clear();
-            input2.sendKeys("84");
-            Thread.sleep(5000);
-            WebElement payment = driver.findElement(By.xpath("//*[@id=\"LoanCalculator\"]/div/div[2]/div/div[1]/div/big"));
-            Assert.assertEquals(payment.getAttribute("innerText"), "14 547");
-            Assert.assertEquals(driver.getCurrentUrl(), "https://www.bspb.ru/retail/consumer-loan/salary/?bspb_param=analytics-link-salary");
+            js.executeScript("scroll(0,2000);");
+            WebElement ATM = driver.findElement(By.xpath("//*[@id=\"footer-menu\"]/div[4]/ul/li[1]/a"));
+            ATM.click();
+            JavascriptExecutor ss = (JavascriptExecutor) driver;
+            ss.executeScript("scroll(0,400);");
+            WebElement dropdown1 = driver.findElement(By.xpath("//*[@id=\"metroSPB\"]"));
+            Select select= new Select(dropdown1);
+            select.selectByVisibleText("Автово");
+
+
+
+
+
+
+
 
         } catch (Exception e) {
             e.printStackTrace();

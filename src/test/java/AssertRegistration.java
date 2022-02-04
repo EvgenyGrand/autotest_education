@@ -39,8 +39,7 @@ public class AssertRegistration{
         } catch (Exception e) {
             e.printStackTrace();
 
-        }finally {
-            driver.quit();
+
         }
 
     }

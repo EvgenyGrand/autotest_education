@@ -35,11 +35,13 @@ public class AssertRegistration{
             WebElement ta = driver.findElement(By.xpath("//*[@id=\"user-menu-profile\"]"));
             ta.click();
             WebElement prof = driver.findElement(By.xpath("//*[@id=\"editProfileForm\"]/div[1]/h2/span"));
+            String url = driver.getCurrentUrl();
             Assert.assertEquals(prof.getText(),"test-user");
+            Assert.assertEquals(url,"http://qa.jtalks.org/jcommune/user");
         } catch (Exception e) {
             e.printStackTrace();
-
-
+        }finally {
+            driver.quit();
         }
 
     }

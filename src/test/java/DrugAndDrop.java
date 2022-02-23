@@ -45,7 +45,7 @@ public class DrugAndDrop {
 
             WebElement payment = driver.findElement(By.xpath("//*[@id=\"LoanCalculator\"]/div/div[2]/div/div[1]/div/big"));
             Thread.sleep(2000);
-            Assert.assertEquals(payment.getAttribute("innerText"),"14 547");
+            Assert.assertEquals(payment.getAttribute("innerText"),"14 347");
             Assert.assertEquals(driver.getCurrentUrl(),"https://www.bspb.ru/retail/consumer-loan/salary/?bspb_param=analytics-link-salary");
 
         } catch (Exception e) {

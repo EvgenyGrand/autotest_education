@@ -50,7 +50,7 @@ public class searchSendKeys {
             buy.click();
             WebElement alert = driver.findElement(By.xpath("//*[@id=\"sbin-text-content\"]/p"));
             String al = alert.getText();
-            Assert.assertEquals(al,"Bling Glitter Soft Case & Holder for Huawei Honor 10 Lite 20 8S Nova 5T Y6S Y5");
+            Assert.assertEquals(al,"For Huawei Honor 9X Lite 9A 8A 8S 8X 20 10i Flip Leather Case Wallet Stand Cover");
 
         } catch (InterruptedException e) {
             e.printStackTrace();

@@ -24,9 +24,11 @@ public class ActionMovetoElement{
 
         WebElement selectweb = driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[3]/a"));
         Actions action = new Actions(driver);
-        action.moveToElement(driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[3]/a"))).perform();
+        action.moveToElement(driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[3]/a"))).build().perform();
+        Thread.sleep(5000);
         WebElement web = driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[3]/div[2]/div[1]/nav[1]/ul/li[1]/a"));
-        web.click();
+        action.moveToElement(web).click().build().perform();
+        Thread.sleep(5000);
         WebElement prof= selectweb.findElement(By.xpath("//*[@id=\"gh-logo\"]"));
         String url= driver.getCurrentUrl();
         Assert.assertEquals(true,prof.isDisplayed());

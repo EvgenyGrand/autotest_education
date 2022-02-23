@@ -34,6 +34,8 @@ public class ActionMovetoElement{
 
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            driver.quit();
         }
 
     }

@@ -19,7 +19,7 @@ import static java.lang.Thread.sleep;
 
 public class dropdownSelect {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));

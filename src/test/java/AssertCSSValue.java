@@ -13,7 +13,7 @@ import java.util.List;
 
 public class AssertCSSValue {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         try {
